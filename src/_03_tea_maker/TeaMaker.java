@@ -5,9 +5,14 @@ package _03_tea_maker;
  */
 
 public class TeaMaker {
-
+	public static void main(String[] args) {
+	Kettle jerry = new Kettle();	
+	jerry.boil();
+	TeaBag fun = new TeaBag("Mint");
+	Cup h = new Cup();
+	h.makeTea(fun, jerry.getWater());
+	}
 	/* Figure out how to make a cup of tea in this runner class, using the other classes below */
-
 }
 
 class TeaBag {
@@ -21,6 +26,18 @@ class TeaBag {
 
 	TeaBag(String flavor) {
 		this.flavor = flavor;
+		if(flavor.equals("Green")) {
+			flavor = GREEN;
+		}
+		else if(flavor.equals("Mint")) {
+			flavor = MINT;
+		}
+		else if(flavor.equals("Chamomile")) {
+			flavor = CHAMOMILE;
+		}
+		else {
+			flavor = PASSION_FRUIT;
+		}
 	}
 
 	String getFlavor() {

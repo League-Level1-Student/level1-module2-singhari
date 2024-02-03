@@ -14,7 +14,12 @@ public class Backpack {
 		// Your mission is to go to school.
 		// 1. First you need to put all your supplies into your backpack - use
 		// the putInBackpack(...) methods
-
+		Pencil a = new Pencil();
+		Ruler e = new Ruler();
+		Textbook t = new Textbook();
+		putInBackpack(a);
+		putInBackpack(e);
+		putInBackpack(t);
 		goToSchool();
 	}
 
@@ -48,7 +53,7 @@ public class Backpack {
 
 	public void goToSchool() {
 		if (pencil == null || ruler == null || textbook == null) {
-			System.err.println("ERROR: You are not ready for School!");
+			System.err.println("ERROR: You are not ready for school!");
 		} else {
 			System.out.println("Congratulations! You are ready for school");
 		}
@@ -73,7 +78,7 @@ class Pencil extends Supply {
 class Ruler extends Supply {
 	Ruler() {
 		this.name = "ruler";
-		System.out.println("You found your ruler!!");
+		System.out.println("You found your ruler!");
 	}
 
 	public void measure() {
